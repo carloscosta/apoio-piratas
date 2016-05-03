@@ -2,92 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- meta -->
     <meta name="description" content="">
     <meta name="keywords" content="" />
     <meta name="author" content="">
 
-    <!--meta-->
     <title>
       {{#single}}{{post.title}} - {{/single}}
       {{#page}}{{title}} - {{/page}}
       {{title}}
     </title>
 
-    <!--favicon-->
+    <!-- favicon -->
     <link rel="shortcut icon" href="" />
     <link rel="icon" href="inc/template/favicon.ico" type="image/x-icon" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- The excelent http://helpers.araujo.cc plus our own CSS overlay -->
+    <link rel="stylesheet" href="inc/template/helpers.min.css" />
     <link rel="stylesheet" href="inc/template/style.css" />
 </head>
-<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#" class="navbar-left"><img src="inc/template/pp.png" height="42" width="42" id="logo"></a>
-          <a class="navbar-brand" href="#">
-            &nbsp;
+<body layout="no-margin">
+
+    <nav layout="" text="line-2 center upper light gray-50">
+        <a href="#about">About</a>
+        <a href="#text">Text</a>
+        <a href="#layout">Layout</a>
+        <a href="#mobile">Mobile/Printer</a>
+        <a href="#enjoy">Get involved!</a>
+    </nav>
+
+    <section text="center navy white line-1" layout="center orange full-width" clearfix>
+        <p text="line-2">
+            <img src="inc/template/pp.png" height="42" width="42" id="logo">
+        </p>
+        <h1 text="giant normal">
             {{#single}}{{post.title}} - {{/single}}
             {{#page}}{{title}} - {{/page}}
             {{title}}
-          </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
+            <br>
+            <span text="smaller light white">
+                <small>Useful tools for helping on the web development.</small>
+            </span>
+        </h1>
+    </section>
 
-    <div class="container">
-
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <div class="container">
-            <p class="text-info">Faça download da Ficha de Apoio e ajude a
-            fundar o PIRATAS.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">
-                <span class="glyphicon glyphicon-download-alt"
-                    aria-hidden="true"></span>&nbsp;Ficha de Apoio</a></p>
-          </div>
-        </div>
+    <section layout="center" clearfix>
+        <p text="line-2">Faça download da Ficha de Apoio e ajude a fundar o PIRATAS.</p>
+    </section>
 
 
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>O que sao os piratas?</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="[=pages/piratas]" role="button">saiba mais &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Por que confiar em piratas?</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="[=pages/porque]" role="button">saiba mais &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Procedimento para apoiar</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="[=pages/apoiar]" role="button">saiba mais &raquo;</a></p>
-        </div>
-      </div>
+    <section layout="center">
+        <h2>O que sao os piratas?</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="[=pages/piratas]" role="button">saiba mais &raquo;</a></p>
+
+        <h2>Por que confiar em piratas?</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="[=pages/porque]" role="button">saiba mais &raquo;</a></p>
+
+        <h2>Procedimento para apoiar</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-default" href="[=pages/apoiar]" role="button">saiba mais &raquo;</a></p>
+    </section>
 

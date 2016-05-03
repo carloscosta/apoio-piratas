@@ -1,15 +1,30 @@
 
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+nav {
+    padding:10px 0;
+}
+
+nav a {
+    display:inline;
+    margin-right:18px
+}
+
+hr {
+    margin: auto;
+    max-width: 1024px;
+    border: 0;
+    height: 1px;
+    background: #eee;
+}
+
+section {
+    max-width: 1024px;
+    padding: 40px 0;
+}
+                                             
+section:first-of-type {
+    padding: 95px 0;
 }
 
 #logo {
     margin-top: 9%;
-}
-
-.jumbotron {
-    background: url('index.jpg') no-repeat center center;
-
 }
