@@ -2,134 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- meta -->
     <meta name="description" content="">
     <meta name="keywords" content="" />
     <meta name="author" content="">
 
-    <!--meta-->
     <title>
       
       Piratas - 
       Coleta de assinaturas
     </title>
 
-    <!--favicon-->
+    <!-- favicon -->
     <link rel="shortcut icon" href="" />
     <link rel="icon" href="inc/template/favicon.ico" type="image/x-icon" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Droid Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+
+    <!-- The excelent http://helpers.araujo.cc plus our own CSS overlay -->
+    <link rel="stylesheet" href="inc/template/helpers.min.css" />
     <link rel="stylesheet" href="inc/template/style.css" />
 </head>
-<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#" class="navbar-left"><img src="inc/template/pp.png" height="42" width="42" id="logo"></a>
-          <a class="navbar-brand" href="#">
-            &nbsp;
+<body layout="no-margin">
+
+    <nav layout="" text="line-2 left upper light gray-50">
+        <div>
+            <a href="#quem">Quem somos</a>
+            <a href="#como">Como apoiar</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contatos">Contatos</a>
+        </div>
+    </nav>
+
+    <section id="landing" text="center navy white line-1" layout="center full-width" clearfix>
+        <h1 text="giant bolder">
             
             Piratas - 
             Coleta de assinaturas
-          </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <div class="container">
-            <p class="text-info">Faça download da Ficha de Apoio e ajude a
-            fundar o PIRATAS.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">
-                <span class="glyphicon glyphicon-download-alt"
-                    aria-hidden="true"></span>&nbsp;Ficha de Apoio</a></p>
-          </div>
-        </div>
+            <br>
+            <span text="smaller light white">
+                <small>Faça download da Ficha de Apoio e ajude a fundar o PIRATAS.</small>
+            </span>
+        </h1>
+    </section>
 
 
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>O que sao os piratas?</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="[=pages/piratas]" role="button">saiba mais &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Por que confiar em piratas?</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="[=pages/porque]" role="button">saiba mais &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Procedimento para apoiar</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="[=pages/apoiar]" role="button">saiba mais &raquo;</a></p>
-        </div>
-      </div>
 
 <div class="post">
     <h2>Piratas</h2>
     <div class="content">
 
 
+<p><section layout="center"></p>
 
-<div id="wrap">
-<div id="header">
-    <h1><a href="{{{url}}}">{{title}}</a></h1>
-    <ul>
-        {{{page_links}}}
-        {{#have_posts}}
-            <li><a href="{{{url}}}/index.xml">RSS Feed</a></li>
-        {{/have_posts}}
-    </ul>
+<h2 id='Oquesaoospiratas'>O que sao os piratas?</h2>
+
+<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+
+<p>saiba mais</p>
+
+
+<h2 id='Porqueconfiarempiratas'>Por que confiar em piratas?</h2>
+
+<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+
+<p>saiba mais</p>
+
+<h2 id='Procedimentoparaapoiar'>Procedimento para apoiar</h2>
+
+<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+<p>saiba mais</p>
+
+<p></section></p>
+
 </div>
-
-
 </div>
-</div>
-        <div class="biglinks">
-        </div><!--end biglinks-->
-
  <hr>
+    <footer layout="center full-width" text="center navy white line-1">
+        <span text="smaller">
+            Licenciado sob Licença Creative Commons - <a href="http://creativecommons.org/licenses/by-sa/4.0/">Atribuição-CompartilhaIgual 4.0 Internacional</a>
+        </span>
+        <br>
+        <span text="smaller">Generated by <a href="https://github.com/Fizzadar/Luapress">Luapress</a></span>
+    </footer>
 
-      <footer>
-            <span class="left">Content &copy; Nobody, no rights reserved</span><br>
-            <span class="right">Generated by <a href="https://github.com/Fizzadar/Luapress">Luapress</a></span>
-      </footer>
-    </div> <!-- /container -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    <!--script-->
+    <!-- script -->
     <script type="text/javascript">
     </script>
 

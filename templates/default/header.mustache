@@ -18,6 +18,9 @@
     <link rel="shortcut icon" href="" />
     <link rel="icon" href="inc/template/favicon.ico" type="image/x-icon" />
 
+    <!-- Droid Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+
     <!-- The excelent http://helpers.araujo.cc plus our own CSS overlay -->
     <link rel="stylesheet" href="inc/template/helpers.min.css" />
     <link rel="stylesheet" href="inc/template/style.css" />
@@ -25,45 +28,26 @@
 
 <body layout="no-margin">
 
-    <nav layout="" text="line-2 center upper light gray-50">
-        <a href="#about">About</a>
-        <a href="#text">Text</a>
-        <a href="#layout">Layout</a>
-        <a href="#mobile">Mobile/Printer</a>
-        <a href="#enjoy">Get involved!</a>
+    <nav layout="" text="line-2 left upper light gray-50">
+        <div>
+            <a href="#quem">Quem somos</a>
+            <a href="#como">Como apoiar</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contatos">Contatos</a>
+        </div>
     </nav>
 
-    <section text="center navy white line-1" layout="center orange full-width" clearfix>
-        <p text="line-2">
-            <img src="inc/template/pp.png" height="42" width="42" id="logo">
-        </p>
-        <h1 text="giant normal">
+    <section id="landing" text="center navy white line-1" layout="center full-width" clearfix>
+        <h1 text="giant bolder">
             {{#single}}{{post.title}} - {{/single}}
             {{#page}}{{title}} - {{/page}}
             {{title}}
             <br>
             <span text="smaller light white">
-                <small>Useful tools for helping on the web development.</small>
+                <small>Faça download da Ficha de Apoio e ajude a fundar o PIRATAS.</small>
             </span>
         </h1>
     </section>
 
-    <section layout="center" clearfix>
-        <p text="line-2">Faça download da Ficha de Apoio e ajude a fundar o PIRATAS.</p>
-    </section>
 
-
-    <section layout="center">
-        <h2>O que sao os piratas?</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="[=pages/piratas]" role="button">saiba mais &raquo;</a></p>
-
-        <h2>Por que confiar em piratas?</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="[=pages/porque]" role="button">saiba mais &raquo;</a></p>
-
-        <h2>Procedimento para apoiar</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-default" href="[=pages/apoiar]" role="button">saiba mais &raquo;</a></p>
-    </section>
 
