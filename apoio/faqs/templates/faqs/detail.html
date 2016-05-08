@@ -1,0 +1,18 @@
+
+{% include "header.html" %}
+
+    <h1 layout="margin-5">Respostas para as perguntas mais frequentes</h1>
+
+    <section layout="h-margin-5 center">
+        <h3>{{ question.question_text }}</h3>
+        <p>
+        {{ answer.answer_text }}
+        </p>
+        <p text="small bold">
+        status: {{ question.question_status }} <br>
+        versão: {{ answer.pub_date }} <br>
+        voto: {{ answer.answer_vote }}
+    </section>
+
+{% include "footer.html" %}
+

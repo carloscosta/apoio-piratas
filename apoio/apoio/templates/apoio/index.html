@@ -1,0 +1,132 @@
+{% include "header.html" %}
+
+    <section id="landing" text="center navy white line-1" layout="center full-width" clearfix>
+        <h1 text="giant bolder">
+            {{ SIGLA }}<br>{{ NOME }}
+            <br>
+            <span text="smaller light white">
+                <small>Faça download da Ficha de Apoio e ajude a fundar o PIRATAS.</small>
+            </span>
+
+            </h1>
+            <a href="inc/ficha.zip" layout="rounded white no-border inline-block" text="bigger" style="padding: 15px 40px;">
+                Download da Ficha
+            </a>
+    </section>
+
+    <section id='quem' layout="h-margin-5 center">
+        <h1>O que sao os PIRATAS?</h1>
+        <p>
+        O Partido Pirata (PIRATAS) são um partido político em formação que se
+        pauta pela democracia plena, pela transparência pública e pelo
+        empoderamento, com o objetivo de defender institucionalmente os direitos
+        humanos fundamentais por meio do respeito à diversidade social, à
+        liberdade de crença e descrença, respeito aos direitos civis e políticos, à
+        privacidade individual e à liberdade de expressão.
+        </p>
+
+
+        <h1>O que os piratas fazem?</h1>
+
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed lorem id magna condimentum interdum. Suspendisse quis odio vel elit fringilla congue facilisis euismod ipsum. Vestibulum a neque vestibulum, ultricies nisi vitae, imperdiet quam. Duis euismod gravida enim, sagittis imperdiet nisl fermentum et. Praesent tempor, ipsum vel gravida congue, nisi arcu dignissim libero, sit amet pretium ex metus eu quam. Suspendisse dictum aliquam libero ut porta. Phasellus in commodo odio. Integer lacinia accumsan sem et vehicula. 
+        </p>
+
+
+        <h1>Porque não somos apenas mais um partido?</h1>
+
+        <p>
+        Os PIRATAS primam por uma atuação distribuída,
+        horizontalizada, participativa e colaborativa, de modo
+        que o compartilhamento, abertura e transparência nos
+        permitam construir conjuntamente as propostas do
+        coletivo, superando a lógica fisiologista e
+        personalizada da política partidária tradicional.
+        <p>
+
+        <h1>Por que confiar em piratas?</h1>
+
+        <p>
+        Acreditamos em um ponto de equilíbrio entre o
+        produtor e o consumidor de cultura; em modelos
+        de produção da e acesso à cultura sem
+        intermediários atravessadores e sem o peso de
+        uma carga tributária desproporcional; e serviços
+        públicos essenciais universais e de qualidade;
+        em livre acesso a conhecimento, educação e
+        cultura; no acesso à rede mundial de
+        computadores como direito fundamental; na
+        inclusão digital como uma necessidade; no
+        compartilhamento de conhecimento como uma
+        obrigação; e no uso de padrões abertos e
+        software livre como soluções.
+        </p>
+
+        <h1>Procedimento para apoiar, ou como dar seu apoio?</h1>
+
+        <p>
+        Baixe a ficha de "apoiamento", siga as
+        instruções de preenchimento e envio para
+        o ponto de coleta mais próximo. Procure o ponto
+        mais próximo de você.
+        </p>
+
+    </section>
+
+   <section id="contatos" layout="center" clearfix="">
+
+    <h1 text="center giant thin">contatos</h2>
+
+    <div layout="half left" on-tablet="no-float">
+      <h3 text="bolder">Fale com os organizadores</h2>
+      <p>
+        Entre no site principal do partido, visite <a href='http://partidopirata.org/'>partidopirata.org</a><br>Ou nas redes sociais:
+      </p>
+      <ul>
+        <li>
+          <b>Twitter:</b> lorem ipsum
+        </li>
+        <li>
+          <b>Facebook:</b> lorem ipsum
+        </li>
+        <li>
+          <b>Telegram:</b> lorem ipsum
+        </li>
+      </ul>
+      <p>
+         Se preferir, procure o <a href='https://pt.wikipedia.org/wiki/Roque_Brasiliano'>bucaneiro</a> responsável pela campanha de apoio:
+      </p>
+      <div layout="h-margin-30 v-margin-15" text="big bolder" style="color: #4C2582; ">
+          Roque Brasiliano<br>
+          Bahia, Brasil<br>
+          Telegram: <a href='https://telegram.me/RoqueBrasiliano'>https://telegram.me/RoqueBrasiliano</a>
+      </div>
+    </div>
+    <div layout="half right" on-tablet="no-float">
+        <h3 text="bolder">Envie uma pergunta</h3>
+        <p>
+            <span text="bold big line-1 red">Tip</span>: Antes de perguntar, veja as <a href='/faqs'>Perguntas e Respostas mais frequentes</a>.
+        </p>
+
+        <form action="/my-handling-form-page" method="post">
+            <div>
+                <label for="name">Nome&nbsp;</label>
+                <input type="text" id="name" />
+            </div>
+            <div>
+                <label for="mail">E-mail&nbsp;</label>
+                <input type="email" id="mail" />
+            </div>
+            <div>
+                <label for="msg">Pergunte&nbsp;</label>
+                <textarea id="msg"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">enviar</button>
+            </div>
+        </form>
+    </div>
+  </section>
+
+{% include "footer.html" %}
+

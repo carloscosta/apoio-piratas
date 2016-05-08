@@ -1,0 +1,23 @@
+
+{% include "header.html" %}
+
+    <section text="center" layout="center full-width" clearfix>
+        <h2>Perguntas e Respostas</h2>
+        
+        {% if latest_question_list %}
+        
+            {% for question in latest_question_list %}
+        
+                <p text="big"><a href="/faqs/{{ question.id }}/">{{ question.question_text }}</a></p>
+            
+            {% endfor %}
+        
+        {% else %}
+        
+            <p>Sem perguntas no momento.</p>
+        
+        {% endif %}
+    </section>
+
+{% include "footer.html" %}
+
