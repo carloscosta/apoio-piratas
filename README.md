@@ -1,8 +1,19 @@
 # apoio-piratas
 Pequeno projeto de apoio ao Partido Pirata
 
-Instruções sobre como instalar as dependências e rodar o site
-  ....
+Instruções sobre como instalar as dependências e rodar o site.
+
+O site depende de Django, instale usando pip (pip3 pois preferimos Python 3).
+```
+$ sudo pip3 install django
+```
+
+Se precisar instale o pip primeiro, use o instalador de pacotes da distribuição linux de sua escolha.
+
+Para rodar em modo desenvolvedor, chame de dentro do diretório `apoio/` o seguinte comando:
+```
+$ python3 manage.py runserver
+```
 
 =======
 
