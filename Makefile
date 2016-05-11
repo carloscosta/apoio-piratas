@@ -1,8 +1,9 @@
 
-build:
-	/bin/mkdir -p --verbose inc
-	/bin/mkdir -p --verbose posts
-	/bin/rm -Rf --verbose ./build/*
-	/usr/local/bin/luapress --no-cache
+PY3 = $(shell /usr/bin/which python3)
 
-.PHONY: build
+
+build-models:
+	$(PY3) 
+
+
+.PHONY: build-models
