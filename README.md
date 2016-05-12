@@ -45,5 +45,8 @@ $ docker run -d -p 8000:8000 -v $PWD/apoio:/app/apoio piratas/apoio
 $ docker-compose up -d
 ```
 
-Acesse via: http://127.0.0.1:8000 ou http://192.168.99.100:8000
+Acesse via:
 
+Linux:http://127.0.0.1:8000
+
+Mac ou Windows: http://192.168.99.100:8000 (caso não funcione, pegue o IP da docker-machine com:  $docker-machine ip
