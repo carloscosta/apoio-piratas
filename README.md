@@ -1,5 +1,6 @@
 # apoio-piratas
-Pequeno projeto de apoio ao Partido Pirata
+
+`Pequeno projeto de apoio ao Partido Pirata`
 
 Instruções sobre como instalar as dependências e rodar o site.
 
@@ -9,6 +10,11 @@ $ sudo pip3 install django
 ```
 
 Se precisar instale o pip primeiro, use o instalador de pacotes da distribuição linux de sua escolha.
+
+Tire um git clone do repositório:
+```
+$ git clone https://github.com/piratas/apoio-piratas.git
+```
 
 Para rodar em modo desenvolvedor, chame de dentro do diretório `apoio/` o seguinte comando:
 ```
