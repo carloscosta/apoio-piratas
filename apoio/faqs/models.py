@@ -22,6 +22,9 @@ class Question(models.Model):
         if self.question_status == self.APPROVED:
             return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
+    def __str__(self):
+        return self.question_text
+
 
 class Answer(models.Model):
     question     = models.ForeignKey(Question, on_delete=models.CASCADE)
@@ -31,4 +34,7 @@ class Answer(models.Model):
 
     def was_answered_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+    def __str__(self):
+        return self.answer_text
 
