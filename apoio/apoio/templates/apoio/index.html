@@ -27,62 +27,7 @@
         </div>
     </section>
 
-   <section id="contatos" layout="center" clearfix="">
-
-    <h1 text="center giant thin">contatos</h2>
-
-    <div layout="half left" on-tablet="no-float">
-        <h3 text="bolder" layout="h-margin-5 h-padding-5">
-          <i class="material-icons" style="vertical-align: middle;">chat</i>
-            Fale com os organizadores
-        </h3>
-        <br>
-        <p layout="h-margin-5 h-padding-5">
-            O Comitê Nacional da nossa campanha de coleta mantém um grupo <b>Telegram</b>,
-            entre em contato conosco <a href='https://telegram.me/apoiopirata'>https://telegram.me/apoiopirata</a>
-        </p>
-        <ul>
-            <li>
-                Entre no site principal do partido, visite <a href='http://partidopirata.org/'>partidopirata.org</a>
-            </li>
-            <br>
-            <li>
-                Encotre-nos via <b>Twitter</b>, visite <a href="https://twitter.com/PartidoPirataBR">https://twitter.com/PartidoPirataBR</a>
-            </li>
-            <br>
-            <li>
-                Se você prefere <b>Facebook</b>, visite <a href='https://www.facebook.com/PartidoPirata.BR'>https://www.facebook.com/PartidoPirata.BR</a>
-            </li>
-        </ul>
-    </div>
-    <div layout="half right" on-tablet="no-float">
-        <h3 text="bolder">
-          <i class="material-icons" style="vertical-align: middle;">live_help</i>
-            Envie uma pergunta
-        </h3>
-        <p>
-            <span text="bold big line-1 red">Tip</span>: Antes de perguntar, veja as <a href='/faqs'>Perguntas e Respostas mais frequentes</a>.
-        </p>
-
-        <form action="/my-handling-form-page" method="post">
-            <div>
-                <label for="name">Nome&nbsp;</label>
-                <input type="text" id="name" />
-            </div>
-            <div>
-                <label for="mail">E-mail&nbsp;</label>
-                <input type="email" id="mail" />
-            </div>
-            <div>
-                <label for="msg">Pergunte&nbsp;</label>
-                <textarea id="msg"></textarea>
-            </div>
-            <div class="button">
-                <button type="submit">enviar</button>
-            </div>
-        </form>
-    </div>
-  </section>
+    {% include "contatos.html" %}
 
 {% include "footer.html" %}
 
