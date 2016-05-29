@@ -1,9 +1,17 @@
 body {
     font-family: 'Droid Sans', sans-serif;
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 
-a[href]:hover {
+code {
+    font-size: 1.2em;
+}
+
+a {
+    transition: color linear .12s, opacity linear .12s
+}
+
+a:hover {
     color:  #522E91;
     text-decoration: underline;
 }
@@ -103,7 +111,7 @@ footer a[href] {
 }
 
 footer a[href]:hover {
-    color:  #000;
+    /*color:  #000;*/
     text-decoration: underline;
-    text-shadow: 2px 2px 5px white;
+    /*text-shadow: 2px 2px 5px white;*/
 }

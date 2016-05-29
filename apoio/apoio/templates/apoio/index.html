@@ -1,6 +1,6 @@
 {% include "header.html" %}
 
-    <section id="landing" text="center navy white line-1" layout="center full-width" clearfix>
+    <section id="landing" text="center navy white line-1" layout="center full-width fix">
         <h1 text="giant bolder" layout="h-margin-5">
             {{ SIGLA }}<br>
             <center>
@@ -14,23 +14,22 @@
                 <small>Faça download da Ficha de Apoio e ajude a fundar o <code>PIRATAS</code></small>
             </span>
         </h1>
-        <span layout="rounded white no-border inline-block" text="bigger" style="padding: 15px 40px; color: #522E91;"> 
+        <p>
+          <a href="https://partidopirata.org/wp-content/uploads/2014/06/apoiamento.pdf" layout="rounded white no-border inline-block" text="bigger no-decoration" style="padding: 15px 40px; color: #522E91;">
             <i class="material-icons" style="vertical-align: middle;">assignment</i>
-            <a href="https://partidopirata.org/wp-content/uploads/2014/06/apoiamento.pdf" >
-               Baixe a Ficha
-            </a>
-        </span>
+            Baixe a Ficha
+          </a>
+        </p>
     </section>
 
     {% include "texto_apoio.html" %}
 
-    <section text="center" layout="center full-width" clearfix="">
-        <div layout="padding-15"> 
-            <img src="static/liberte_democracia_PIRATAS.jpg" alt="Liberte a Democracia com os PIRATAS" />
+    <section text="center" layout="center full-width fix">
+        <div layout="v-padding-15">
+            <img src="static/liberte_democracia_PIRATAS.jpg" alt="Liberte a Democracia com os PIRATAS" layout="top-40" />
         </div>
     </section>
 
     {% include "contatos.html" %}
 
 {% include "footer.html" %}
-
