@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 
 
+app_name = 'faqs'
 urlpatterns = [
         ## /faqs/ the timely ordered list of approved questions
         url(r'^$', views.index, name='index'),
@@ -12,7 +13,7 @@ urlpatterns = [
         ## /faqs/$question_id/results/ the question id, visible if aproved and answered
         url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
 
-        ## /faqs/$question_id/vote/ the question id, visible on any state and been it answered or not
-        url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+        ## /faqs/$question_id/ask/ the question id, form to ask a question
+        url(r'^(?P<question_id>[0-9]+)/ask/$', views.ask, name='ask'),
 ]
 

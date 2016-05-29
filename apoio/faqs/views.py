@@ -2,6 +2,7 @@
 from django.template.loader import get_template
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.urlresolvers import reverse
 from .models import Question, Answer
 
 
@@ -28,5 +29,5 @@ def results(request, question_id):
     return HttpResponse(response % question_id)
 
 
-def vote(request, question_id):
+def ask(request, question_id):
     return HttpResponse("Vote na pergunta %s." % question_id)

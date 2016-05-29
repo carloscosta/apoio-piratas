@@ -1,22 +1,25 @@
 {% include "header.html" %}
 
     <section id="landing" text="center navy white line-1" layout="center full-width" clearfix>
-        <h1 text="giant bolder">
+        <h1 text="giant bolder" layout="h-margin-5">
             {{ SIGLA }}<br>
-            <center><img src="static/logo.pirata.svg" alt="PIRATAS" height="62" width="62" /></center>
+            <center>
+                <a href="http://www.partidopirata.org/">
+                    <img src="static/logo.pirata.svg" alt="PIRATAS" height="62" width="62" />
+                </a>
+            </center>
             {{ NOME }}
             <br>
-            <span text="smaller light white">
-                <small>Faça download da Ficha de Apoio e ajude a fundar o PIRATAS.</small>
+            <span text="smaller light white" layout="h-margin-5">
+                <small>Faça download da Ficha de Apoio e ajude a fundar o <code>PIRATAS</code></small>
             </span>
-
-            </h1>
-            <span layout="rounded white no-border inline-block" text="bigger" style="padding: 15px 40px; color: #522E91;"> 
-                <i class="material-icons" style="vertical-align: middle;">assignment</i>
-                <a href="http://partidopirata.org/wp-content/uploads/2014/06/apoiamento.pdf" >
-                   Download da Ficha
-                </a>
-            </span>
+        </h1>
+        <span layout="rounded white no-border inline-block" text="bigger" style="padding: 15px 40px; color: #522E91;"> 
+            <i class="material-icons" style="vertical-align: middle;">assignment</i>
+            <a href="https://partidopirata.org/wp-content/uploads/2014/06/apoiamento.pdf" >
+               Baixe a Ficha
+            </a>
+        </span>
     </section>
 
     {% include "texto_apoio.html" %}
