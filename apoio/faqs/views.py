@@ -29,5 +29,5 @@ def results(request, question_id):
     return HttpResponse(response % question_id)
 
 
-def ask(request, question_id):
-    return HttpResponse("Vote na pergunta %s." % question_id)
+def ask(request):
+    return HttpResponse("Pergunta aqui.")

@@ -14,6 +14,6 @@ urlpatterns = [
         url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
 
         ## /faqs/$question_id/ask/ the question id, form to ask a question
-        url(r'^(?P<question_id>[0-9]+)/ask/$', views.ask, name='ask'),
+        url(r'^ask/$', views.ask, name='ask'),
 ]
 

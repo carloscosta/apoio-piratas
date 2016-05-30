@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html', {'SIGLA': 'PIRATAS', 'NOME': 'Campanha de Coleta de Assinaturas'})
+    return render(request, 'index.html', {'SIGLA': 'PARTIDO PIRATA', 'NOME': 'Campanha de Coleta de Assinaturas'})
