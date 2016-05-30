@@ -1,6 +1,6 @@
 # apoio-piratas
 
-`Pequeno projeto de apoio ao Partido Pirata`
+`PEQUENO PROJETO DE APOIO AO PARTIDO PIRATA`
 
 Instruções sobre como instalar as dependências e rodar o site.
 

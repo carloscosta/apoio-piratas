@@ -41,49 +41,36 @@
         <div>
             <a href="/">HOME</a>
             <a href="/faqs">FAQ</a>
-            <a href="/faqs/{{ question.id }}">{{question.id }}</a>
+            <a href="/faqs/ask/">ASK</a>
         </div>
     </nav>
 
     <h2 layout="margin-15">Respostas para as perguntas mais frequentes</h2>
 
     <section layout="center fix">
-        <div layout="half left" ontablet="full-width" onmobile="full-width">
-             <h1 layout="h-margin-15">
-                <i class="material-icons" style="vertical-align: middle;">live_help</i>
-                {{ question.question_text }}
-            </h1>
-            <p layout="h-margin-15">{{ answer.answer_text }}</p>
-            <p text="small" layout="h-margin-15">
-                <span text='red bolder'>META</span> :: {{ question.question_status }} :: {{ answer.pub_date }} :: {{ answer.answer_vote }}
-            </p>
-        </div>
+        <p layout="h-margin-15">
+            Se não encontrou a resposta para sua dúvida, envie então sua pergunta através
+            do formulário abaixo.
+        </p>
 
-        <div layout="half right" ontablet="full-width" onmobile="full-width">
-           <p layout="h-margin-15">
-             Se não encontrou a resposta para sua dúvida, envie então sua pergunta através
-             do formulário abaixo.
-            </p>
+        <div layout='table'>
+            {% if error_message %}<p layout="h-margin-15"><strong>{{ error_message }}</strong></p>{% endif %}
 
-            <div layout='table'>
-                {% if error_message %}<p layout="h-margin-15"><strong>{{ error_message }}</strong></p>{% endif %}
+            <form action="{% url 'faqs:index' %}" method="post" layout="h-margin-15">
+                    <label>
+                          <span>Nome</span><input id="name" type="text" name="name" />
+                    </label>
 
-                <form action="{% url 'faqs:index' %}" method="post" layout="h-margin-15">
-                        <label>
-                              <span>Nome</span><input id="name" type="text" name="name" />
-                        </label>
+                    <label>
+                          <span>Email</span><input id="email" type="text" name="email" />
+                    </label>
 
-                        <label>
-                              <span>Email</span><input id="email" type="text" name="email" />
-                        </label>
-
-                        <label>
-                              <span>Pergunte</span><textarea id="question" name="question"></textarea>
-                              <br>
-                              <input type="submit" value="enviar" />
-                        </label>
-                 </form>
-            </div>
+                    <label>
+                          <span>Pergunte</span><textarea id="question" name="question"></textarea>
+                          <br>
+                          <input type="submit" value="enviar" />
+                    </label>
+             </form>
         </div>
     </section>
 

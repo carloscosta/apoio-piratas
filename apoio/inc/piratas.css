@@ -22,22 +22,28 @@ img {
 }
 
 nav {
+    background: url("logo.pirata.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 42px 42px;
+    background-color: #522E91;
     padding: 20px 0;
 }
 
 nav div {
-    margin-left: 20px;
+    margin-left: 60px;
+    background-color: #522E91;
 }
 
-nav a {
+nav a[href] {
     display: inline;
     margin-right: 20px;
+    color:  #fff;
     text-decoration: none;
 }
 
 nav a[href]:hover {
-    color:  #000;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 hr {

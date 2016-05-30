@@ -24,10 +24,10 @@ def detail(request, question_id):
     return render(request, 'faqs/detail.html', {'question': question, 'answer': answer})
 
 
-def results(request, question_id):
-    response = "Esse é o resultado da pergunta %s."
-    return HttpResponse(response % question_id)
-
-
 def ask(request):
-    return HttpResponse("Pergunta aqui.")
+    template = get_template('faqs/ask.html')
+    context = {
+        'latest_question_list': 0,
+    }
+    return HttpResponse(template.render(context, request))
+
