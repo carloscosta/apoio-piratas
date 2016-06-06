@@ -10,7 +10,10 @@ urlpatterns = [
         ## /faqs/$question_id/ the question id, visible if pending and not-answered
         url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
 
-        ## /faqs/$question_id/ask/ the question id, form to ask a question
+        ## /faqs/ask/ form to ask a question
         url(r'^ask/$', views.ask, name='ask'),
+
+        ## /faqs/ask/ The thanks page after submitted throw ask a question
+        url(r'^ask/thanks/$', views.thanks, name='thanks'),
 ]
 

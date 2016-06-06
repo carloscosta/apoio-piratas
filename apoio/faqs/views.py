@@ -1,9 +1,10 @@
 
 from django.template.loader import get_template
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.urlresolvers import reverse
+from django.http import HttpResponse, HttpResponseRedirect
+
 from .models import Question, Answer
+from .forms import AskForm
 
 
 def index(request):
@@ -24,10 +25,22 @@ def detail(request, question_id):
     return render(request, 'faqs/detail.html', {'question': question, 'answer': answer})
 
 
+def thanks(request):
+    if request.method == 'POST':
+        form = AskForm(request.POST)
+        if form.is_valid():
+            context = {
+                'name': form.cleaned_data['your_name'],
+                'email': form.cleaned_data['your_email'],
+                'comment': form.cleaned_data['comment'],
+            }
+            template = get_template('faqs/thanks.html')
+            return HttpResponse(template.render(context, request))
+    else:
+        raise Http404("Essa pergunta não foi feita ou ainda não foi respondida.")
+
+
 def ask(request):
-    template = get_template('faqs/ask.html')
-    context = {
-        'latest_question_list': 0,
-    }
-    return HttpResponse(template.render(context, request))
+    form = AskForm()
+    return render(request, 'faqs/ask.html', {'form': form})
 

@@ -12,6 +12,7 @@ class Question(models.Model):
     QUESTION_STATUS = ( (PENDING, 'Pending'), (APPROVED, 'Approved'), )
 
     question_text   = models.CharField(max_length=200)
+    question_email  = models.CharField(max_length=200)
     question_status = models.CharField(max_length=2, choices=QUESTION_STATUS, default=PENDING)
     pub_date        = models.DateTimeField('date published')
 
