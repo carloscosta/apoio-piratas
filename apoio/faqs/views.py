@@ -17,12 +17,13 @@ def index(request):
 
 
 def detail(request, question_id):
+    form = AskForm()
     try:
         question = Question.objects.get(pk=question_id)
         answer   = Answer.objects.get(pk=question_id)
     except Question.DoesNotExist:
         raise Http404("Essa pergunta não foi feita ou ainda não foi respondida.")
-    return render(request, 'faqs/detail.html', {'question': question, 'answer': answer})
+    return render(request, 'faqs/detail.html', {'question': question, 'answer': answer, 'form': form})
 
 
 def thanks(request):

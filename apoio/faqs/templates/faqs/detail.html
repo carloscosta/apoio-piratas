@@ -66,22 +66,12 @@
             </p>
 
             <div layout='table'>
-                {% if error_message %}<p layout="h-margin-15"><strong>{{ error_message }}</strong></p>{% endif %}
-
-                <form action="{% url 'faqs:index' %}" method="post" layout="h-margin-15">
-                        <label>
-                              <span>Nome</span><input id="name" type="text" name="name" />
-                        </label>
-
-                        <label>
-                              <span>Email</span><input id="email" type="text" name="email" />
-                        </label>
-
-                        <label>
-                              <span>Pergunte</span><textarea id="question" name="question"></textarea>
-                              <br>
-                              <input type="submit" value="enviar" />
-                        </label>
+                <form action="{% url 'faqs:thanks' %}" method="post" layout="h-margin-15">
+                    {% csrf_token %}
+                    {{ form }}
+                    <br>
+                    <input type="submit" value="enviar" />
+             </form>
                  </form>
             </div>
         </div>
