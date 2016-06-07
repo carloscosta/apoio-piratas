@@ -1,7 +1,8 @@
 
 from django.template.loader import get_template
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.utils import timezone
 
 from .models import Question, Answer
 from .forms import AskForm
@@ -20,7 +21,7 @@ def detail(request, question_id):
     form = AskForm()
     try:
         question = Question.objects.get(pk=question_id)
-        answer   = Answer.objects.get(pk=question_id)
+        answer   = Answer.objects.get(question_id=question.id)
     except Question.DoesNotExist:
         raise Http404("Essa pergunta não foi feita ou ainda não foi respondida.")
     return render(request, 'faqs/detail.html', {'question': question, 'answer': answer, 'form': form})
@@ -30,9 +31,15 @@ def thanks(request):
     if request.method == 'POST':
         form = AskForm(request.POST)
         if form.is_valid():
+            Q = Question()
+            Q.question_text   = form.cleaned_data['comment']
+            Q.question_email  = form.cleaned_data['your_email']
+            Q.question_status = 'PE'
+            Q.pub_date        = timezone.now()
+            Q.save()
             context = {
-                'name': form.cleaned_data['your_name'],
-                'email': form.cleaned_data['your_email'],
+                   'name': form.cleaned_data['your_name'],
+                  'email': form.cleaned_data['your_email'],
                 'comment': form.cleaned_data['comment'],
             }
             template = get_template('faqs/thanks.html')
