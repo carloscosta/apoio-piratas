@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Droid Sans', sans-serif;
     /*font-size: 14px;*/
@@ -13,7 +14,6 @@ a {
 
 a:hover {
     color:  #522E91;
-    /*text-decoration: underline;*/
 }
 
 img {
@@ -63,7 +63,7 @@ section#landing {
 }
 
 section:first-of-type {
-    padding: 95px 0;
+    padding: 42px 0;
 }
 
 section:last-of-type {
@@ -78,6 +78,7 @@ form {
     padding: 10px;
 }
 
+/* FORM */
 form input {
     width: 275px;
     max-width: 475px;
@@ -117,12 +118,10 @@ footer a[href] {
 }
 
 footer a[href]:hover {
-    /*color:  #000;*/
     text-decoration: underline;
-    /*text-shadow: 2px 2px 5px white;*/
 }
 
-/* Getting involved menu */
+/* from here to down belongs to "Getting Involved" menu */
 .output div {
     display: none;
 }
@@ -153,7 +152,7 @@ footer a[href]:hover {
 
 .column-list li:hover {
   color: white;
-  background-color: #4da8d4;
+  background-color: #522E91;
   cursor: pointer;
 }
 
@@ -161,9 +160,10 @@ footer a[href]:hover {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3em;
+  margin-top: 1em;
   border: black solid thin;
   border-radius: 10px;
+    font-size: 90%;
 }
 
 #columns td {
@@ -174,23 +174,21 @@ footer a[href]:hover {
     margin-top:0.5em;
     margin-bottom: 0.5em;
     width: 100%;
-    height: 14em;
+    height: 17em;
     border: none;
 }
 
 .selected {
-   background: #0073AE;
+   background: #522E91;
    color: white;
 }
 
 .selected:hover {
-   background: #0073AE;
+   background: #522E91;
    color: white;
 }
 
 .placeholder {
-    color: grey;
-    font-size: large;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -204,5 +202,3 @@ footer a[href]:hover {
   display: none;
   width: 90%;
 }
-
-
