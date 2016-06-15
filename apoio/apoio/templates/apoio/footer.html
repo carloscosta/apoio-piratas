@@ -27,13 +27,13 @@
           var list = '<ul class="column-list">';
           var option = [
               "COMUNICAÇÃO",
+              "COMUNICADO DE IMPRENSA",
               "DESIGNER",
-              "Social media",
-              "Submissions",
-              "Policy",
-              "Technology",
-              "Disputes",
-              "Leadership",
+              "TECNOLOGIA",
+              "JURÍDICO",
+              "GESTÃO DE CRISES",
+              "RELAÇÕES INTERNACIONAIS",
+              "PROPOSTAS",
               ];
           for (index = 0; index < option.length; index++) {
             list += "<li>" + option[index] + "</li>";
@@ -52,41 +52,36 @@
             }
             option[0] = [
               "O que é o Grupo de Trabalho de Comunicação?",
-              "O que é um Comunicado de Imprensa?",
-              "Eu tenho uma ideia para um Comunicado de Imprensa. E agora, o que faço?",
-              "Eu escrevi um Comunicado de Imprensa. Qual meu próximo passo?",
               "Eu escrevi um texto ou quero ajudar em revisar ou traduzir",
               "Eu quero fazer parte do Grupo de Comunicação",
               ];
             option[1] = [
+              "O que é um Comunicado de Imprensa?",
+              "Tenho uma ideia para um Comunicado de Imprensa. O que fazer?",
+              "Escrevi um Comunicado de Imprensa. Como proceder?",
+              ];
+            option[2] = [
               "Eu tenho ideia para uma imagem ou um vídeo",
               "Eu fiz uma imagem ou um vídeo",
               ];
-            option[2] = [
-              "I want to join the Social Media Team",
-              ]
             option[3] = [
-              "What is a submission?",
-              "I think we should make a submission",
-              "I want to write or help write a submission",
-              ];
+              "Eu quero entrar no grupo de TI",
+              ]
             option[4] = [
-              "I have an idea for a policy",
-              "I want to write a policy",
-              "I want to join the Policy Development Committee",
+              "O que é o Jurídico Pirata?",
+              "Quero ser parte do Jurídico do Partido Pirata",
               ];
             option[5] = [
-              "I want to join the IT Team",
-              "I want to join the Programming Team",
-              "I want to join the Internet Engineering Committee",
+              "O que é Gestão de Crises?",
               ];
             option[6] = [
-              "I want to join the Dispute Resolution Committee",
+              "O que são Relações Internacionais?",
+              "Quero ser parte do grupo de Relações Internacionais",
               ];
             option[7] = [
-              "I want to join the National Council",
-              "I want to be an Officer",
-              "I want to be a State or Territory Coordinator",
+              "O que são propostas?",
+              "Eu tenho uma ideia para uma proposta",
+              "O que é Loomio?",
               ];
             var list = '<ul class="column-list">';
             for (index = 0; index < option[col1].length; index++) {
@@ -104,19 +99,19 @@
               if (col1 == 0) {
                 $("#press").children().eq(col3).show();
               } else if (col1 == 1) {
-                $("#designs").children().eq(col3).show();
+                $("#press2").children().eq(col3).show();
               } else if (col1 == 2) {
-                $("#socmed").children().eq(col3).show();
+                $("#designs").children().eq(col3).show();
               } else if (col1 == 3) {
-                $("#submissions").children().eq(col3).show();
+                $("#gti").children().eq(col3).show();
               } else if (col1 == 4) {
-                $("#policy").children().eq(col3).show();
+                $("#gtj").children().eq(col3).show();
               } else if (col1 == 5) {
-                $("#technology").children().eq(col3).show();
+                $("#policy").children().eq(col3).show();
               } else if (col1 == 6) {
-                $("#disputes").children().eq(col3).show();
+                $("#inter").children().eq(col3).show();
               } else if (col1 == 7) {
-                $("#leadership").children().eq(col3).show();
+                $("#proposta").children().eq(col3).show();
               }
             });
           });
