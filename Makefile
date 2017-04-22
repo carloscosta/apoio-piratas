@@ -1,9 +1,12 @@
 
-PY3 = $(shell /usr/bin/which python3)
+GOLANG = $(shell /usr/bin/which go)
+TARGET = ./apoio.server
+SOURCE = $(wildcard *.go)
 
+build:
+	$(GOLANG) build -x -o $(TARGET) $(SOURCE)
 
-build-models:
-	$(PY3) 
+clean:
+	rm --verbose $(TARGET) *.log
 
-
-.PHONY: build-models
+.PHONY: clean

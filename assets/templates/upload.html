@@ -1,0 +1,75 @@
+{{template "header.html"}}
+
+<body>
+
+<script type='text/javascript' src='/assets/js/transweb.js'></script>
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>Upload Files <small>using XMLHttpRequest + HTML5 File API</small></h1>
+    </div>
+
+<form id="form1" enctype="multipart/form-data" method="post" action="/upload">
+<div class="panel panel-default">
+<div class="panel-body">
+    <div id='open_selector_div' >Select a File <b><a href="#" id="fakeFileSelect">click here</a></b></div>
+    <input type="file" name="fileToUpload" id="fileToUpload" onchange="file_selected(this.files);" style='display:none;' multiple></input>
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+<div>
+    <div id='file-info' style='display:none;'>
+        <span>File Name: <span id="fileName" class='text-info'></span></span><br>
+        <span>File Size: <span id="fileSize" class='text-info'></span></span><br>
+        <span>File Type: <span id="fileType" class='text-info'></span></span><br>
+        <br>
+        <button type="button" class="btn btn-default" id='button_upload' onclick="upload()" disabled>transfer</button>
+        <br>
+        <br>
+    </div>
+</div>
+<div>
+    <div id="progress-main" style='display:none;'>
+    <div id="progress" class='progress'>
+        <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    </div>
+    <div>
+        <span>Received <span id='loaded' class="text-info"></span> of <span id='total' class="text-info"></span></span><br>
+        <span>Transfer Rate: <span id='rate' class="text-info"></span></span><br>
+        <span>Estimated Time Remaining: <span id='estimated' class="text-info"></span></span><br>
+        <span>Elapsed Time: <span id='elapsed' class="text-info"></span></span>
+    </div>
+    </div><!--div id="progress-main"-->
+</div>
+</div><!--div class="row"-->
+</div><!--div class="container-fluid"-->
+</form>
+
+<script type='text/javascript'>
+    var fakeFileSelect = document.getElementById("fakeFileSelect"),
+        realFileElem   = document.getElementById("fileToUpload");
+
+    fakeFileSelect.addEventListener("click", function (e) {
+        if (realFileElem) {
+            realFileElem.click();
+        }
+        e.preventDefault(); // prevent navigation to "#"
+    }, false);
+</script>
+
+<div id='results'></div>
+
+</div> <!-- class="container" -->
+
+
+<!--FSL footer with configurable items -->
+<script>
+    showContact = 'true'; //default
+    contactEmail = "carlos.costa@nxp.com";
+    WriteFSLFooter();
+</script>
+</body>
+</html>
