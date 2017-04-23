@@ -1,10 +1,28 @@
 version: "2"
 services:
   web:
+      depends_on:
+        - db
+      links:
+        - db
       build: .
       ports:
-          - "80:80"
-      logging:
-        driver: journald
-      volumes:
-        - banco_apoio:/app/apoio/db.sqlite3
+          - "42086:8981"
+      restart: always
+  phpmyadmin:
+    depends_on:
+      - db
+    links:
+      - db
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - "42087:80"
+    restart: always
+  db:
+    image: mariadb:10.1
+    command: mysqld --innodb-buffer-pool-size=64M
+    volumes:
+      - "./mariadb:/var/lib/mysql"
+    restart: always
+    env_file:
+      - "./mariadb.env"
