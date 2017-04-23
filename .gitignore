@@ -3,4 +3,8 @@
 *~
 *.swp
 *.pyc
+*.env
+*.log
+apoio.server
+mariadb/
 apoio/inc/admin/*
