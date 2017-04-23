@@ -2,23 +2,21 @@
 
 `PEQUENO PROJETO DE APOIO AO PARTIDO PIRATA`
 
-Instruções sobre como instalar as dependências e rodar o servidor.
-
-O site depende de golang, instale usando a melhor maneira que lhe for
-conveniente.
+Aqui concentramos instruções sobre como instalar as dependências e rodar o servidor.
+O site depende de golang, instale usando a melhor maneira que lhe for conveniente.
 
 Tire um git clone do repositório:
 ```
 $ git clone https://github.com/piratas/apoio-piratas.git
 ```
 
-Para rodar em modo desenvolvedor, chame de dentro do diretório `apoio/` o seguinte comando:
+Para rodar em modo desenvolvedor, chame de dentro do diretório `apoio-piratas/`
+(clonado acima) os seguintes comandos:
 ```
 $ make build
 $ ./apoio.server
 ```
 
-=======
 
 # Rodando com Docker ou Docker-compose
 
@@ -38,9 +36,10 @@ Windows: https://docs.docker.com/windows/
 
 Acesse via:
 
-Linux: http://127.0.0.1
+Linux: http://127.0.0.1:8981
 
-Mac ou Windows: http://192.168.99.100 (caso não funcione, pegue o IP da docker-machine com:  $docker-machine ip
+Mac ou Windows: http://192.168.99.100:8981
+(caso não funcione, pegue o IP da docker-machine com: $docker-machine ip)
 
 Para desligar o container
 ```
@@ -63,4 +62,5 @@ Para analisar os logs no host
 journalctl CONTAINER_NAME=nome
 ```
 
-Para mais informações sobre como foi configurado o log vejam [aqui](https://docs.docker.com/engine/admin/logging/journald/)
+Para mais informações sobre como foi configurado o log
+veja [aqui](https://docs.docker.com/engine/admin/logging/journald/)
