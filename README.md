@@ -2,14 +2,10 @@
 
 `PEQUENO PROJETO DE APOIO AO PARTIDO PIRATA`
 
-Instruções sobre como instalar as dependências e rodar o site.
+Instruções sobre como instalar as dependências e rodar o servidor.
 
-O site depende de Django, instale usando pip (pip3 pois preferimos Python 3).
-```
-$ sudo pip3 install django
-```
-
-Se precisar instale o pip primeiro, use o instalador de pacotes da distribuição linux de sua escolha.
+O site depende de golang, instale usando a melhor maneira que lhe for
+conveniente.
 
 Tire um git clone do repositório:
 ```
@@ -18,7 +14,8 @@ $ git clone https://github.com/piratas/apoio-piratas.git
 
 Para rodar em modo desenvolvedor, chame de dentro do diretório `apoio/` o seguinte comando:
 ```
-$ python3 manage.py runserver
+$ make build
+$ ./apoio.server
 ```
 
 =======
@@ -41,7 +38,7 @@ Windows: https://docs.docker.com/windows/
 
 Acesse via:
 
-Linux:http://127.0.0.1
+Linux: http://127.0.0.1
 
 Mac ou Windows: http://192.168.99.100 (caso não funcione, pegue o IP da docker-machine com:  $docker-machine ip
 
@@ -53,7 +50,7 @@ Para desligar o container
 Para visualizar os logs usando docker
 Primeiro descubra o nome ou id do container
 ```
-# docker ps 
+# docker ps
 ```
 
 Depois analise os logs
@@ -61,7 +58,7 @@ Depois analise os logs
 # docker logs -f nome ou id
 ```
 
-Para analisar os logs no host 
+Para analisar os logs no host
 ```
 journalctl CONTAINER_NAME=nome
 ```
